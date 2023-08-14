@@ -26,5 +26,61 @@
                 </li>
             </ul>
         </nav>
+        <div>
+            <h2>Bash</h2>
+            <p>Bash usually works in all Linux and Mac Terminals. On Windows you'll need an extra Commandline like <a href="https://git-scm.com/downloads" target="_blank">git Bash</a></p>
+            <p>A "directory" is often refered to as "Folder" in common speach and you "specify" with a space " " after the command.</p>
+            <p>If there is spaces in the names of files or directories they need to be marked with "\" or surrounded with ' .</p>
+            <p>For example</p>
+            <p class="bash-example">cd This\ Folder/That\ Folder</p>
+            <p>or</p>
+            <p class="bash-example">cd 'This Folder'/'That Folder'</p>
+            <table class="bash-table">
+                <thead>
+                    <tr>
+                        <th>Command</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>pwd</span>
+                        </td>
+                        <td>print working directory</td>
+                        <td>Prints out the path which your commands take as starting location</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>ls</span>
+                        </td>
+                        <td>list</td>
+                        <td>Lists all directories and Files in your specified directory (if not specified as argument it will use current working directory)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>cd</span>
+                        </td>
+                        <td>change directory</td>
+                        <td>Changes your current working directory to specified directory</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>mkdir</span>
+                        </td>
+                        <td>make directory</td>
+                        <td>Creates a new directory at the specified path. If only a name is given the new directory will be located in the current working directory. Can't be an already existing directory.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>touch</span>
+                        </td>
+                        <td>Touch</td>
+                        <td>Creates a new file at the specified path or updates the "Date modified" to now if the file already exists. Can't be the name of an existing directory.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
