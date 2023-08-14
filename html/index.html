@@ -35,8 +35,171 @@
                 <span>&lt;!DOCTYPE html&gt;<br />&lt;html lang="en"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="[path to stylesheet]"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;[Title showing in the tab]&lt;/title&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br />&lt;/html&gt;</span>
 
             </div>
-            <div class="table">
-                <h2>Table</h2>
+            <div class="html-tag">
+                <h2>html-tag</h2>
+                <table class="html-table">
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>&lt;html&gt; and &lt;/html&gt;</span>
+                            </td>
+                            <td>html</td>
+                            <td>Wraps around the whole document, letting the browser know what to show.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="head-tag">
+                <h2>head-tag</h2>
+                <table class="html-table">
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>&lt;head&gt; and &lt;/head&gt;</span>
+                            </td>
+                            <td>head</td>
+                            <td>Is used for metadata, to link fonts or stylesheets and to set the title</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;link rel="" href=""&gt;</span>
+                            </td>
+                            <td>link</td>
+                            <td>Is used to link fonts or stylesheets. rel sets what is being linked and href sets the path to what is being linked</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;title&gt; and &lt;/title&gt;</span>
+                            </td>
+                            <td>title</td>
+                            <td>Sets the title visible in the tab</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="body-tag">
+                <h2>body-tag</h2>
+                <table class="html-table">
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>&lt;body&gt; and &lt;/body&gt;</span>
+                            </td>
+                            <td>body</td>
+                            <td>The wrapper element for all content that is visible on the page</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;nav&gt; and &lt;/nav&gt;</span>
+                            </td>
+                            <td>Navigation</td>
+                            <td>Wrapper for the Navigation part of the website, usually combined with a <a href="#unordered-list">unordered list</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;div&gt; and &lt;/div&gt;</span>
+                            </td>
+                            <td>Division</td>
+                            <td>Is used to divide the html into logical chunks to make working with it easier</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="content-tags">
+                <h2>content-tags</h2>
+                <table class="html-table">
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>&lt;h1&gt; - &lt;/h1&gt; <br />&lt;h6&gt; - &lt;/h6&gt;</span>
+                            </td>
+                            <td>Heading 1 - 6</td>
+                            <td>Used for different kinds of headings with 1 being the biggest and 6 being the smallest</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;p&gt; and &lt;/p&gt;</span>
+                            </td>
+                            <td>Paragraph</td>
+                            <td>Used to put simple text on the website</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;span&gt; and &lt;&gt;</span>
+                            </td>
+                            <td>Span</td>
+                            <td>Used to select a small subportion of text to change its properties</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;a href="" target=""&gt; and &lt;/a&gt;</span>
+                            </td>
+                            <td>Hyperlink</td>
+                            <td>Used to link to files or websites with href being the url or the path. target can be used to open the link in a new tab, window etc.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;img src="" alt=""&gt;</span>
+                            </td>
+                            <td>Image</td>
+                            <td>Used to show an image from a url or file using src. alt is used to display text if the image can't be displayed.<br />Can be used inside of a to create a Hyperlink.</td>
+                        </tr>
+                        <tr>
+                            <a id="unordered-list">
+                                <td>
+                                    <span>&lt;ul&gt; and &lt;/ul&gt;</span>
+                                </td>
+                                <td>Unordered list</td>
+                                <td>Used to create a list of items that do not count up. Used wrapped around li</td>
+                        </a>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;ol&gt; and &lt;/ol&gt;</span>
+                            </td>
+                            <td>Ordered list</td>
+                            <td>Used to create a list of items that does count up. Used wrapped around li</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;li&gt; and &lt;/li&gt;</span>
+                            </td>
+                            <td>List item</td>
+                            <td>Used to wrap each item inside ordered or unordered lists.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-tag">
+                <h2>table-tag</h2>
                 <table class="html-table">
                     <thead>
                         <tr>
@@ -55,10 +218,38 @@
                         </tr>
                         <tr>
                             <td>
-                                <span>&lt;tr&gt;</span>
+                                <span>&lt;tr&gt; and &lt;/tr&gt;</span>
+                            </td>
+                            <td>Table Head</td>
+                            <td>Used to define what each column of the table is showing</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;tr&gt; and &lt;/tr&gt;</span>
+                            </td>
+                            <td>Table Body</td>
+                            <td>Wraps around all elements of the table</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;tr&gt; and &lt;/tr&gt;</span>
                             </td>
                             <td>Table Row</td>
-                            <td></td>
+                            <td>Used to wrap each row inside a table</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;tr&gt; and &lt;/tr&gt;</span>
+                            </td>
+                            <td>Table Data</td>
+                            <td>Used to wrap around the data displayed in a column in a row</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>&lt;tr&gt; and &lt;/tr&gt;</span>
+                            </td>
+                            <td>Table Foot</td>
+                            <td>Used if the last row in the table is supposed to have some conclusion and should be styled special</td>
                         </tr>
                     </tbody>
                 </table>
