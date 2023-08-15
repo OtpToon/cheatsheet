@@ -26,5 +26,176 @@
                 </li>
             </ul>
         </nav>
+        <div class="main">
+            <h2>CSS</h2>
+            <p>CSS is used to style a website by giving different html-snippets different attributes.</p>
+            <p>Typical syntax for Css is:</p>
+            <span class="css-example">[Identifier] {<br />[Attribute]: [Value];<br />...<br />}</span>
+            <div class="css-identifiers">
+                <h2>Identifiers</h2>
+                <table class="css-table">
+                    <thead>
+                        <tr>
+                            <th>Identifier</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>[name]</td>
+                            <td>tag</td>
+                            <td>Typical html-tags like h1, p, etc</td>
+                        </tr>
+                        <tr>
+                            <td>.[name]</td>
+                            <td>class</td>
+                            <td>Marked in html with <span>&lt;tag class="[name]"&gt;</span>.</td>
+                        </tr>
+                        <tr>
+                            <td>#[name]</td>
+                            <td>id</td>
+                            <td>Marked in html with <span>&lt;tag id="[name]"&gt;</span>.</td>
+                        </tr>
+                    </tbody>
+                    <p>The tag and class identifiers can be combined to more accuratly decide which elements should be changed</p>
+                    <p>for a class within a tag:</p>
+                    <span>[name] .[name2]{<br />...<br />}</span>
+                    <p>for a tag inside a class:</p>
+                    <span>.[name] [name2]{<br />...<br />}</span>
+                </table>
+            </div>
+            <div class="css-attributes">
+                <h2>Atributes</h2>
+                <table class="css-table">
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Name</th>
+                            <th>Valid Values</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>display</td>
+                            <td>Display</td>
+                            <td><a href="#">block</a>, <a href="#">inline</a>, <a href="#">inline-block</a> or none (invisible)</td>
+                            <td>The display value decides if the element is visible and how it interacts with neighboring elements</td>
+                        </tr>
+                        <tr>
+                            <td>position</td>
+                            <td>Position</td>
+                            <td>static, absolute, fixed, relative, sticky</td>
+                            <td>The position value decides the location of the element within the users window.</td>
+                        </tr>
+                        <tr>
+                            <td>z-index</td>
+                            <td>Z-index</td>
+                            <td><a href="#">auto</a>, number</td>
+                            <td>Z-index decides which element will be shown if multiple elements claim the same space.</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>margin</td>
+                            <td>Margin</td>
+                            <td><a href="#">length</a>, <a href="#">%</a>, <a href="#">auto</a></td>
+                            <td>The margin defines the distance neighboring elements need to have from the border of this element.<br />Margin can be set using 1 (all sides), 2 (top/bottom, sides),3 (top, sides, bottom) or 4 (top, right, bottom, left) Values.<br />The distances can also be set on their own using margin-top/right/left/bottom.</td>
+                        </tr>
+                        <tr>
+                            <td>padding</td>
+                            <td>Padding</td>
+                            <td><a href="#">length</a>, <a href="#">%</a></td>
+                            <td>The margin defines the distance from the content of the element to the border of the element.<br />Padding can be set using 1 (all sides), 2 (top/bottom, sides),3 (top, sides, bottom) or 4 (top, right, bottom, left) Values.<br />The distances can also be set on their own using padding-top/right/left/bottom.</td>
+                        </tr>
+                        <tr>
+                            <td>border<br />border-width<br />border-style<br />border-color<br />border-radius</td>
+                            <td>Border</td>
+                            <td>[border-width] [border-style] [border-color]<br />thin, medium, thick, <a href="#">length</a><br />none, hidden, dotted, dashed, solid, double, groove, ridge, outset<br /><a href="#">color</a>, transparent<br /><a href="#">length</a>, %</td>
+                            <td>This Attribute defines if and with what style the element is surrounded by a visual border.<br />border: can take the width, style and color within 1 line.<br />The border-subattributes can be set using 1 (all sides), 2 (top/bottom, sides),3 (top, sides, bottom) or 4 (top, right, bottom, left) Values.<br />Radius changes the form of the corners with (top-left, top-right, bottom-right, bottom-left) - the shorted version is the same order as above.</td>
+                        </tr>
+                        <tr>
+                            <td>min-width/height<br />max-width/height<br />width/height</td>
+                            <td>Width/Height</td>
+                            <td><a href="#">length</a>, <a href="#">%</a>, <a href="#">auto</a></td>
+                            <td>Defines the smallest this element will become when the windowsize is changed.<br />Defines the largest this element will become when the windowsize is changed.<br />Defines the size this element will be.<br /></td>
+                        </tr>
+                        <tr>
+                            <td>overflow</td>
+                            <td>Overflow</td>
+                            <td>visible, hidden, clip, scroll, auto</td>
+                            <td>Overflow handles how an element is shown when the content is too big to fit within the space defined for it.</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>background<br />background-color<br />background-image</td>
+                            <td>Background</td>
+                            <td>[background-color] [background-image]<br /><a href="#">color</a><br />url(path)</td>
+                            <td>This Attribute defines what the background of the element looks like.</td>
+                        </tr>
+                        <tr>
+                            <td>color</td>
+                            <td>Color</td>
+                            <td><a href="#">hex</a>, <a href="#">hex with transparency</a>, <a href="#">rgb</a>, <a href="#">rgba</a>, <a href="#">hsl</a>, <a href="#">hsla</a>, colornames</td>
+                            <td>Defines the color of text.</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>font<br />font-style<br />font-weight<br />font-size<br />line-height<br />font-family</td>
+                            <td>Font</td>
+                            <td>[font-style] [font-weight] [font-size/line-height] [font-family]<br />normal, italic, oblique<br />normal, bold, bolder, lighter, 100-900<br /><a href="#">font-sizes</a>, <a href="#">length</a>, <a href="#">%</a><br />normal, number, <a href="#">length</a>, <a href="#">%</a><br />font-family-name, <a href="#">font-family-type</a></td>
+                            <td>Defines the size and form of characters.</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="css-values">
+                <h2>Values</h2>
+                <table class="css-table">
+                    <thead>
+                        <tr>
+                            <th>Value</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </body>
 </html>
