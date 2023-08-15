@@ -78,27 +78,21 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
                             <td>display</td>
                             <td>Display</td>
-                            <td><a href="#">block</a>, <a href="#">inline</a>, <a href="#">inline-block</a> or none (invisible)</td>
+                            <td><a href="#block">block</a>, <a href="#inline">inline</a>, <a href="#inline_block">inline-block</a> or none (invisible)</td>
                             <td>The display value decides if the element is visible and how it interacts with neighboring elements</td>
                         </tr>
                         <tr>
                             <td>position</td>
                             <td>Position</td>
-                            <td>static, absolute, fixed, relative, sticky</td>
+                            <td><a href="#static">static</a>, <a href="#absolute">absolute</a>, <a href="#fixed">fixed</a>, <a href="#relative">relative</a>, <a href="#sticky">sticky</a></td>
                             <td>The position value decides the location of the element within the users window.</td>
                         </tr>
                         <tr>
                             <td>z-index</td>
                             <td>Z-index</td>
-                            <td><a href="#">auto</a>, number</td>
+                            <td><a href="#auto">auto</a>, number</td>
                             <td>Z-index decides which element will be shown if multiple elements claim the same space.</td>
                         </tr>
                         <tr>
@@ -110,31 +104,31 @@
                         <tr>
                             <td>margin</td>
                             <td>Margin</td>
-                            <td><a href="#">length</a>, <a href="#">%</a>, <a href="#">auto</a></td>
+                            <td><a href="#length">length</a>, <a href="#percent">%</a>, <a href="#auto">auto</a></td>
                             <td>The margin defines the distance neighboring elements need to have from the border of this element.<br />Margin can be set using 1 (all sides), 2 (top/bottom, sides),3 (top, sides, bottom) or 4 (top, right, bottom, left) Values.<br />The distances can also be set on their own using margin-top/right/left/bottom.</td>
                         </tr>
                         <tr>
                             <td>padding</td>
                             <td>Padding</td>
-                            <td><a href="#">length</a>, <a href="#">%</a></td>
+                            <td><a href="#length">length</a>, <a href="#percent">%</a></td>
                             <td>The margin defines the distance from the content of the element to the border of the element.<br />Padding can be set using 1 (all sides), 2 (top/bottom, sides),3 (top, sides, bottom) or 4 (top, right, bottom, left) Values.<br />The distances can also be set on their own using padding-top/right/left/bottom.</td>
                         </tr>
                         <tr>
                             <td>border<br />border-width<br />border-style<br />border-color<br />border-radius</td>
                             <td>Border</td>
-                            <td>[border-width] [border-style] [border-color]<br />thin, medium, thick, <a href="#">length</a><br />none, hidden, dotted, dashed, solid, double, groove, ridge, outset<br /><a href="#">color</a>, transparent<br /><a href="#">length</a>, %</td>
+                            <td>[border-width] [border-style] [border-color]<br />thin, medium, thick, <a href="#length">length</a><br />none, hidden, dotted, dashed, solid, double, groove, ridge, outset<br /><a href="#color">color</a>, transparent<br /><a href="#length">length</a>, %</td>
                             <td>This Attribute defines if and with what style the element is surrounded by a visual border.<br />border: can take the width, style and color within 1 line.<br />The border-subattributes can be set using 1 (all sides), 2 (top/bottom, sides),3 (top, sides, bottom) or 4 (top, right, bottom, left) Values.<br />Radius changes the form of the corners with (top-left, top-right, bottom-right, bottom-left) - the shorted version is the same order as above.</td>
                         </tr>
                         <tr>
                             <td>min-width/height<br />max-width/height<br />width/height</td>
                             <td>Width/Height</td>
-                            <td><a href="#">length</a>, <a href="#">%</a>, <a href="#">auto</a></td>
+                            <td><a href="#length">length</a>, <a href="#percent">%</a>, <a href="#auto">auto</a></td>
                             <td>Defines the smallest this element will become when the windowsize is changed.<br />Defines the largest this element will become when the windowsize is changed.<br />Defines the size this element will be.<br /></td>
                         </tr>
                         <tr>
                             <td>overflow</td>
                             <td>Overflow</td>
-                            <td>visible, hidden, clip, scroll, auto</td>
+                            <td><a href="#visible">visible</a>, <a href="#hidden">hidden</a>, <a href="#clip">clip</a>, <a href="#scroll">scroll</a>, <a href="#auto">auto</a></td>
                             <td>Overflow handles how an element is shown when the content is too big to fit within the space defined for it.</td>
                         </tr>
                         <tr>
@@ -146,13 +140,13 @@
                         <tr>
                             <td>background<br />background-color<br />background-image</td>
                             <td>Background</td>
-                            <td>[background-color] [background-image]<br /><a href="#">color</a><br />url(path)</td>
+                            <td>[background-color] [background-image]<br /><a href="#color">color</a><br />url(path)</td>
                             <td>This Attribute defines what the background of the element looks like.</td>
                         </tr>
                         <tr>
                             <td>color</td>
                             <td>Color</td>
-                            <td><a href="#">hex</a>, <a href="#">hex with transparency</a>, <a href="#">rgb</a>, <a href="#">rgba</a>, <a href="#">hsl</a>, <a href="#">hsla</a>, colornames</td>
+                            <td><a href="#hex">hex</a>, <a href="#hex_transperancy">hex with transparency</a>, <a href="#rgb">rgb</a>, <a href="#rgba">rgba</a>, <a href="#hsl">hsl</a>, <a href="#hsla">hsla</a>, colornames</td>
                             <td>Defines the color of text.</td>
                         </tr>
                         <tr>
@@ -164,16 +158,9 @@
                         <tr>
                             <td>font<br />font-style<br />font-weight<br />font-size<br />line-height<br />font-family</td>
                             <td>Font</td>
-                            <td>[font-style] [font-weight] [font-size/line-height] [font-family]<br />normal, italic, oblique<br />normal, bold, bolder, lighter, 100-900<br /><a href="#">font-sizes</a>, <a href="#">length</a>, <a href="#">%</a><br />normal, number, <a href="#">length</a>, <a href="#">%</a><br />font-family-name, <a href="#">font-family-type</a></td>
+                            <td>[font-style] [font-weight] [font-size/line-height] [font-family]<br />normal, italic, oblique<br />normal, bold, bolder, lighter, 100-900<br /><a href="#font_sizes">font-sizes</a>, <a href="#length">length</a>, <a href="#percent">%</a><br />normal, number, <a href="#length">length</a>, <a href="#percent">%</a><br />font-family-name, <a href="#font_family_type">font-family-type</a></td>
                             <td>Defines the size and form of characters.</td>
                         </tr>
-                        <tr>
-                            <td><br /></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        
                     </tbody>
                 </table>
             </div>
@@ -182,16 +169,130 @@
                 <table class="css-table">
                     <thead>
                         <tr>
-                            <th>Value</th>
-                            <th>Name</th>
+                            <th>Valuename</th>
                             <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td><a id=""></a></td>
                             <td></td>
+                        </tr>
+                        <tr>
+                            <td><a id="block">block</a></td>
+                            <td>Displays an element as a block element. It starts on a new line, and takes up the whole width</td>
+                        </tr>
+                        <tr>
+                            <td><a id="inline">inline</a></td>
+                            <td>Displays an element as an inline element. Any height and width properties will have no effect</td>
+                        </tr>
+                        <tr>
+                            <td><a id="inline_block">inline-block</a></td>
+                            <td>Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
                             <td></td>
+                        </tr>
+                        <tr>
+                            <td><a id="static">static</a></td>
+                            <td>Elements render in order, as they appear in the document flow</td>
+                        </tr>
+                        <tr>
+                            <td><a id="absolute">absolute</a></td>
+                            <td>The element is positioned relative to its first positioned ancestor element</td>
+                        </tr>
+                        <tr>
+                            <td><a id="fixed">fixed</a></td>
+                            <td>The element is positioned relative to the browser window</td>
+                        </tr>
+                        <tr>
+                            <td><a id="relative">relative</a></td>
+                            <td>The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position</td>
+                        </tr>
+                        <tr>
+                            <td><a id="sticky">sticky</a></td>
+                            <td>The element is positioned based on the user's scroll position</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
                             <td></td>
+                        </tr>
+                        <tr>
+                            <td><a id="auto">auto</a></td>
+                            <td>The attribute uses a value calculated based on the ancestor-element</td>
+                        </tr>
+                        <tr>
+                            <td><a id="percent">%</a></td>
+                            <td>The attribute uses a percentage-value multiplied by the inherited value</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a id="length">length</a></td>
+                            <td>Most popular units: Xpx - X pixels, Xem - X times the font-size of the element <br /><a href="https://www.w3schools.com/cssref/css_units.php">More Units and their description</a></td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a id="color"></a>color</td>
+                            <td>Defined using one of the methods below</td>
+                        </tr>
+                        <tr>
+                            <td><a id="hex">hex</a></td>
+                            <td>Using a 6-digit hexnumber: #rrggbb</td>
+                        </tr>
+                        <tr>
+                            <td><a id="hex_transparency">hex with transparency</a></td>
+                            <td>Using a 8-digit hexnumber: #rrggbbaa, opacity increases as the "aa" part increases from #00 to #FF</td>
+                        </tr>
+                        <tr>
+                            <td><a id="rgb">rgb</a></td>
+                            <td>Using the rgb(red, green, blue) notation with each number ranging from 0 to 255 or a percentage</td>
+                        </tr>
+                        <tr>
+                            <td><a id="rgba">rgba</a></td>
+                            <td>Using the rgba(reg, green, blue, alpha/opacity) notation where alpha is a number between 0.0 and 1.0</td>
+                        </tr>
+                        <tr>
+                            <td><a id="hsl">hsl</a></td>
+                            <td>Using the hsl(hue in degree(0-360), saturation in %, lightness in %) notation</td>
+                        </tr>
+                        <tr>
+                            <td><a id="hsla">hsla</a></td>
+                            <td>Using the hsla(hue in degree(0-360), saturation in %, lightness in %, alpha/opacity as 0.0-1.0) notation</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a id="visible">visible</a></td>
+                            <td>The overflow is not clipped. It renders outside the element's box.</td>
+                        </tr>
+                        <tr>
+                            <td><a id="clip">clip</a></td>
+                            <td>The overflow is clipped, and the rest of the content will be invisible. Forbids scrolling</td>
+                        </tr>
+                        <tr>
+                            <td><a id="scroll">scroll</a></td>
+                            <td>The overflow is clipped, but a scroll-bar is added to see the rest of the content</td>
+                        </tr>
+                        <tr>
+                            <td><br /></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a id="font_sizes">font-sizes</a></td>
+                            <td>Self explaining: medium, xx-small, x-small, small, large, x-large, xx-large<br />smaller/larger: 1 size larger or smaller than the parent-element<br /><a href="#percent">%</a> and <a href="#length">length</a></td>
+                        </tr>
+                        <tr>
+                            <td><a id="font_family_type">font-family-type</a></td>
+                            <td>Generic family names are used in case the users browser can't display any other Font. Those are: serif, sans-serif, cursive, fantasy, monospace</td>
                         </tr>
                     </tbody>
                 </table>
