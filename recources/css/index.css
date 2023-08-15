@@ -42,13 +42,16 @@ nav {
     padding-top: 50px;
     padding-bottom: 100%;
     z-index: 9;
+    line-height: 2;
+    
 }
 nav a, nav ul, nav li {
     background-color: rgba(52, 39, 25, 0.8);
+    list-style-type: none;
 }
 
 #active {
-    background-color: red;
+    background-color: rgba(255, 94, 0, 0.555);
 }
 
 .main {
@@ -59,17 +62,24 @@ nav a, nav ul, nav li {
 span {
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
-    border: thin white solid;
+    border: thin rgba(255, 255, 255, 0.678) solid;
     display: block;
 }
 
 table {
     border: medium solid rgba(0,0,0,0.5);
     border-collapse: collapse;
+    display: block;
+    text-align: center;
 }
 table tr {
     border-bottom: thin solid rgba(0,0,0,0.4);
 }
 table td, table th {
     border-right: thin solid rgba(0,0,0,0.4);
+}
+
+#my_signature {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 }
