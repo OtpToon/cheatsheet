@@ -1,0 +1,55 @@
+CSS
+
+a {
+	text-decoration: underline/none;
+}
+
+order important!
+[tag]:link
+[tag]:visited
+[tag]:hover
+[tag]:active
+
+cursor: pointer;
+
+button{
+	box-shadow: [offset-x: length] [offset-y: length] ;
+}
+use example:
+hover background change
+active color change
+
+float: left;
+
+transition: ;
+
+.something > li {}
+
+.something li+li::before
+li+li = only if those 2 are adjacent it selects them
+::before = puts this before the element
+::after
+content: "";
+
+border-left-color: [color];
+vertical-align: ;
+
+breadcrumbs:
+	location - based on hierarchical structure of site
+	attribute - based on attributes of current page or item
+	path - unique to a user’s journey on the site
+
+
+HTML
+
+title=" " in <a> (tooltips)
+<button></button>
+
+wrap a in div with class and change class background-color property for propper interaction
+
+
+Design Guide
+
+#######
+
+
