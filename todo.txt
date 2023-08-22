@@ -54,3 +54,22 @@ Wireframes and Prototypes: https://medium.com/thinking-design/everything-you-nee
 Order of HTML
 enter CSS rulessets without content when creating html tags
 
+Grid Design: columns, rows, gutter, margin
+(usually 12 or 16 columns and 4ish rows, gutter is significantly smaller than row/column)
+(responsive: pc 12, tablet 6, movile 4 column grid)
+whitespace: passive and active
+
+Remember, the reasons we design using grids are:
+-Promote consistency within our designs
+-Properly align elements on our page
+-Provide ample spacing between content
+Remember a grid is made up of:
+-Columns
+-Gutters
+-Margins
+Spacing is incredibly important within a design to ensure:
+-Elements have ample room to breathe
+-Denote emphasis on certain parts of a page
+-Promote harmonious patterns and rhythms within your designs
+
+Flexbox (Design/CSS)
