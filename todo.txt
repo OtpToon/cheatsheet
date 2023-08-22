@@ -50,6 +50,7 @@ wrap a in div with class and change class background-color property for propper 
 
 Design Guide
 
-#######
-
+Wireframes and Prototypes: https://medium.com/thinking-design/everything-you-need-to-know-about-wireframes-and-prototypes-76f828a1bcbc
+Order of HTML
+enter CSS rulessets without content when creating html tags
 
