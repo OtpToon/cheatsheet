@@ -73,3 +73,5 @@ Spacing is incredibly important within a design to ensure:
 -Promote harmonious patterns and rhythms within your designs
 
 Flexbox (Design/CSS)
+display:flex/inline-flex; -> Flex *container*
+justify-content:flex-start/-end/center/space-around/-between, align-items, flex-grow, flex-shrink, flex-basis, flex, flex-wrap, aligh-content, flex-direction, flex-flow
