@@ -74,4 +74,4 @@ Spacing is incredibly important within a design to ensure:
 
 Flexbox (Design/CSS)
 display:flex/inline-flex; -> Flex *container*
-justify-content:flex-start/-end/center/space-around/-between, align-items, flex-grow, flex-shrink, flex-basis, flex, flex-wrap, aligh-content, flex-direction, flex-flow
+justify-content:flex-start/-end/center/space-around/-between, align-items:flex-start/-end/center/baseline/stretch(combined with min/max width/height), flex-grow, flex-shrink, flex-basis, flex, flex-wrap, aligh-content, flex-direction, flex-flow
