@@ -74,4 +74,11 @@ Spacing is incredibly important within a design to ensure:
 
 Flexbox (Design/CSS)
 display:flex/inline-flex; -> Flex *container*
-justify-content:flex-start/-end/center/space-around/-between, align-items:flex-start/-end/center/baseline/stretch(combined with min/max width/height), flex-grow, flex-shrink, flex-basis, flex, flex-wrap, aligh-content, flex-direction, flex-flow
+main axis (horizontal(default))
+justify-content:flex-start/-end/center/space-around/-between, flex-wrap:wrap/wrap-reverse/(default)nowrap
+cross axis (vertical(default))
+align-items:flex-start/-end/center/baseline/stretch(combined with min/max width/height) (single row), align-content:flex-start/-end/center/space-between/-around/(default)stretch (multiple rows)
+
+flex-grow:0(default)/1/2/... , flex-shrink:0/1(default)/2/..., flex-basis:length,(shorthand) flex:grow shrink(optional) basis(optional)
+changing axis behaviour
+flex-direction:row(default)/row-reverse/column/column-reverse, (shorthand)flex-flow:flex-direction flex-wrap;
