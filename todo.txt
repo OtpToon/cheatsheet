@@ -39,6 +39,8 @@ breadcrumbs:
 	attribute - based on attributes of current page or item
 	path - unique to a user’s journey on the site
 
+object-fit: cover/contain/fill/none/scale-down
+
 
 HTML
 
