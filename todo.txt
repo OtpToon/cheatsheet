@@ -87,6 +87,7 @@ flex-direction:row(default)/row-reverse/column/column-reverse, (shorthand)flex-f
 
 
 Grid (Design/CSS)
+	display: grid;
 	grid-template-columns: (length/percentage) repeat for amount of columns split by spaces
 	grid-template-rows: (length/percentage) repeat for amount of rows split by spaces
 	grid-template: rows "/" columns
@@ -94,8 +95,10 @@ Grid (Design/CSS)
 	minmax([smallest length], [biggest length])
 	grid-template-area
 	row-gap:[length] / column-gap:[length] / gap: [row-gap] [column-gap]
-	grid-row-start / grid-row-end
-	grid-column-start / grid-column-end
-	grid-area
+	grid-row-start / grid-row-end: [number of gridline] (1 = above first row, 3 = above 3rd row etc) or span [number of rows]
+	grid-row: [grid-row-start] "/" [grid-row-end] or span [number of rows]
+	grid-column-start / grid-column-end: [number of gridline] (1 = left of first column, 3 = left of third column etc) span [number of columns]
+	grid-column: [grid-column-start] "/" [grid-column-end] or or span [number of columns]
+	grid-area: [grid-row-start] / [grid-column-start] / [grid-row-end] / [grid-column-end]
 
 	unit fr : splits available space into amount of "fr" used and distributes space relatively (1fr 3fr = space divided into 4 equal parts, 1fr gets 1 part, 3fr gets 3 parts)
