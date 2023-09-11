@@ -93,12 +93,25 @@ Grid (Design/CSS)
 	grid-template: rows "/" columns
 	repeat([amount of rows/columns] [width/height specifications])
 	minmax([smallest length], [biggest length])
-	grid-template-area
+	grid-template-area: "[row 1]" "[row 2]" etc example: "header header" "nav nav" "info services" "footer footer";
 	row-gap:[length] / column-gap:[length] / gap: [row-gap] [column-gap]
 	grid-row-start / grid-row-end: [number of gridline] (1 = above first row, 3 = above 3rd row etc) or span [number of rows]
 	grid-row: [grid-row-start] "/" [grid-row-end] or span [number of rows]
 	grid-column-start / grid-column-end: [number of gridline] (1 = left of first column, 3 = left of third column etc) span [number of columns]
 	grid-column: [grid-column-start] "/" [grid-column-end] or or span [number of columns]
 	grid-area: [grid-row-start] / [grid-column-start] / [grid-row-end] / [grid-column-end]
+	grid-area: [name of element in grid-template-area] example: header/nav/info/services/footer
 
 	unit fr : splits available space into amount of "fr" used and distributes space relatively (1fr 3fr = space divided into 4 equal parts, 1fr gets 1 part, 3fr gets 3 parts)
+
+	justify-items: position within the grid
+	justify-content: position within the grid-element
+	same as flexbox, but without flex
+	align-items: position within the grid
+	align-content: position within the grid-element
+	same as flexbox, but without flex
+	justify-self/align-self - override of grid-rules justify-items/align-items (start/end/center/stretch)
+
+	grid-auto-rows/grid-auto-columns: lengths (px, %, fr, repeat() )
+	grid-auto-flow: row (or) column (with) dense (fill rows from left to right, add rows as needed) (fill columns from top to bot, add columns as needed) (tries to fill the grid when smaller elements are added)
+	
