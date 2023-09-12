@@ -115,3 +115,16 @@ Grid (Design/CSS)
 	grid-auto-rows/grid-auto-columns: lengths (px, %, fr, repeat() )
 	grid-auto-flow: row (or) column (with) dense (fill rows from left to right, add rows as needed) (fill columns from top to bot, add columns as needed) (tries to fill the grid when smaller elements are added)
 	
+
+
+Relative Measurements
+	Em ("em" in css) changes as the font-size of the current element changes (font-size 16 -> 2em = 32)
+	Rem ("rem" in css) (Root em) depends on the font-size of the <html>-tag (set by the browser of the device unless otherwise specified)
+	Percentages: Height & Width depends on the size of the parent element (width should only be put to 100% when no padding, border or margin)
+	Percentages: Padding & Margin depends on the width of the parent element
+	Width: Minimum & Maximum (min-width, max-width) used to set hard limits
+	Height: Minimum & Maximum (min-height, max-height) used to set hard limits
+	Scaling Images and Videos VERY COMMON EXAMPLE: .container img { max-width: 100%; height: auto; display: block;}
+	Scaling Background Images EXAMPLE body { background-image: url('#'); background-repeat: no-repeat; background-position: center; background-size: cover;}
+
+	Em/Rem should be used for textbased layouts, otherwise use percentages
