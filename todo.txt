@@ -128,3 +128,25 @@ Relative Measurements
 	Scaling Background Images EXAMPLE body { background-image: url('#'); background-repeat: no-repeat; background-position: center; background-size: cover;}
 
 	Em/Rem should be used for textbased layouts, otherwise use percentages
+
+
+Media Queries
+	Media Queries Example @media only screen and (max-width: 480px) { body { font-size: 12px} }
+	Range Example @media only screen and (min-width: 320px) and (max-width: 480px) { /*ruleset for 320px-480px*/ }
+	Dots Per Inch (DPI) / Dots Per Centimeter (DPC) Example @media only screen and (min-resolution: 300dpi) { /* CSS for high resolution screens */ }
+	And Operator Example @media only screen and (max-width: 480px) and (min-resolution: 300dpi) { /* CSS ruleset */ }
+	Comma Separated List Example @media only screen and (min-width: 480px), (orientation: landscape) { /* CSS ruleset */ }
+	Breakpoints (typical width of devices) mobile (<= 480px), Table (<= 768px), Tablet landscape (<= 1024px), Laptop (<= 1600px), Desktop (> 1600px)
+
+	Comma = one needs to be true, AND = all need to be true
+	orientation: landscape (more width than height) / portrait (more height than width)
+
+
+	When a website responds to the size of the screen it’s viewed on, it’s called a responsive website.
+	You can write media queries to help with different screen sizes.
+	Adding the viewport <meta> tag to our code allows us to control the width and scaling of the viewport so that it’s sized and scaled correctly on all devices.
+	Media queries require media features. Media features are the conditions that must be met to render the CSS within a media query.
+	Media features can detect many aspects of a user’s browser, including the screen’s width, height, resolution, orientation, and more.
+	The and operator requires multiple media features to be true at once.
+	A comma separated list of media features only requires one media feature to be true for the code within to be applied.
+	The best practice for identifying where media queries should be set is by resizing the browser to determine where the content naturally breaks. Natural breakpoints are found by resizing the browser.
