@@ -150,3 +150,86 @@ Media Queries
 	The and operator requires multiple media features to be true at once.
 	A comma separated list of media features only requires one media feature to be true for the code within to be applied.
 	The best practice for identifying where media queries should be set is by resizing the browser to determine where the content naturally breaks. Natural breakpoints are found by resizing the browser.
+
+
+
+
+Javascript
+
+console.log([this will be printed to the console]);
+; should always be used, but code can usually run properly without
+// comment
+/* */ area comment
+. dot operator
+= asignment operator
+
+Data Types
+Number: any number, including decimals 4, 8, 1516, 23.42
+BigInt: Any number, greater than 253-1 or less than -(253-1), with n appended to the number: 1234567890123456n
+String: Any grouping of characters on your keyboard (letters, numbers, spaces, symbols, etc.) surrounded by single quotes: ' ... ' or double quotes " ... "
+Boolean: This data type only has two possible values— either true or false (without quotes)
+Null: This data type represents the intentional absence of a value, and is represented by the keyword null (without quotes).
+Undefined: This data type is denoted by the keyword undefined (without quotes). It also represents the absence of a value though it has a different use than null. undefined means that a given value does not exist.
+Symbol: new feature, not explained
+Object: Collections of related data
+
+Arithmetic Operators
+Add: +
+Subtract: -
+Multiply:*
+Divide: /
+Remainder: % (auch mod or modulo genannt)
+
+[String 1] + [String 2] = [String 1String 2]
+
+
+Properties
+'Hello'.length; = 5
+
+
+Methods
+'hello'.toUpperCase(); = 'HELLO'
+'Hey'.startsWith('H'); = true
+'   something    '.trim(); = 'something'
+
+
+Built-in Objects
+Math.random(); = random number between 0(inclusive) and 1(exclusive)
+Math.floor(Math.random() * 50); = a whole number between 0(inclusive) and 50(exclusive)
+Math.ceil(); = 
+Number.isInteger();
+
+Variables
+Container for a value
+var: short for variable, is a JavaScript keyword that creates, or declares, a new variable.
+(ES6 or later)
+let: keyword signals that the variable can be reassigned a different value. if init empty its type Undefined
+const: variable cannot be reassigned because it is constant. can't be empty.
+
+can't start with numbers
+are case sensitive myname != myName
+can't be a keyword
+
+
+Mathematical Assignment Operators
+w = w + 1; is the same as w += 1; (same for -, *, /)
+
+Increment/Decrement Operator
+a++ a-- 
+++a --a
+
+String Concatenation with Variables
+console.log('I own a pet ' + myPet + '.'); = I own a pet [myPet].
+
+String Interpolation (ES6 or later)
+In the ES6 version of JavaScript, we can insert, or interpolate, variables into strings using template literals
+const myPet = 'armadillo';
+console.log(`I own a pet ${myPet}.`);
+
+const myName = 'Toon';
+let myCity = 'some City';
+console.log(`My name is ${myName}. My favorite city is ${myCity}`);
+
+
+typeof Operator
+typeof [value/variable] = 'string'/'number' etc
