@@ -233,3 +233,31 @@ console.log(`My name is ${myName}. My favorite city is ${myCity}`);
 
 typeof Operator
 typeof [value/variable] = 'string'/'number' etc
+
+
+Conditional Statements
+if, else if (statement){code}
+else {code}
+comparison operators <, >, <=, >=, ===, !==
+logical operators &&, ||, ! (AND, OR, NOT/BANG)
+truthy vs falsy values falsy: 0, ''/"", null, undefined, NaN
+truthy and falsy Assignment if (username){defaultName = username;}else{defaultName = 'Stranger';}, let username = ''; let defaultName = username || 'Stranger';
+ternary operators shorthand if...else: [statement] ? [what happens when true] : [what happens when false];
+
+switch statement
+let groceryItem = 'papaya';
+
+switch (groceryItem) {
+  case 'tomato':
+    console.log('Tomatoes are $0.49');
+    break;
+  case 'lime':
+    console.log('Limes are $1.49');
+    break;
+  case 'papaya':
+    console.log('Papayas are $1.29');
+    break;
+  default:
+    console.log('Invalid item');
+    break;
+}
