@@ -261,3 +261,40 @@ switch (groceryItem) {
     console.log('Invalid item');
     break;
 }
+
+Functions
+
+declaration:
+function [name]([optional parameters = [optional default value]]){
+	[code]
+	return [return value] (default value is data type undefined);
+}
+expressions:
+const [name] = function ([optional parameters]){
+	[code]
+	return [return value];
+};
+arrow functions:
+const [name] = ([optional parameters]) => {
+	[code]
+	return [return value];
+};
+	no parameters:
+		const functionName = () => {};
+	one parameter:
+		const functionName = paramOne => {};
+	two or more:
+		const functionName = (paramOne, paramTwo) => {};
+
+	single line code:
+		const sumNumbers = number => number + number; //"implicit return" returns number + number
+	multi line code:
+		const sumNumbers = number => {
+			const sum = number + number;
+			return sum;
+		};
+
+calling:
+[name]([optional input]);
+
+Helper function: function used to do a specific job of another function
