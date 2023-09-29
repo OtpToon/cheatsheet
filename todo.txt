@@ -309,3 +309,51 @@ Tightly scoping your variables will greatly improve your code in several ways:
 	It’s easier to maintain your code, since your code will be modular.
 	It will save memory in your code because it will cease to exist after the block finishes running.
 
+
+
+Running JS
+	in Browser console
+		ctrl + shift + j (inspect element) -> console (on about:blank for pure JS, on any site to change that sites behaviour)
+	
+	in Browser Runtime Environment (Front End/Browser)
+		<script> </script> //in html code
+	
+	in Node Runtime Environment (Back End/Serverside)
+		installed Node.js -> write code in file -> terminal "node [filename]"
+		(same in VS-Code Terminal, debugger also works)
+
+Arrays
+	creating arrays
+		array literal: let variable = [x, 'y', 5, false];
+	accessing arrays
+		variable[0]; (strings are arrays of chars)
+		variable[0] = ...;
+
+		let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+
+		const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+		condiments[0] = 'Mayo';
+		console.log(condiments);
+		condiments = ['Mayo'];
+		console.log(condiments);
+		utensils[3] = 'Spoon';
+		console.log(utensils);
+
+		utensils.length; //=> 4
+		utensils.push('something', 'something else'); //=> ['Fork', 'Knife', 'Chopsticks', 'Spork', 'something', 'something else']
+		utensils.pop(); //=> ['Fork', 'Knife', 'Chopsticks', 'Spork', 'something'], returns 'something else'
+		utensils.shift(); //=> ['Knife', 'Chopsticks', 'Spork', 'something'], returns 'Fork'
+		utensils.unshift('thing1', 'thing2'); // => ['thing1', 'thing2', 'Knife', 'Chopsticks', 'Spork', 'something']
+		//.join(), .slice(), .splice(), .shift(), .unshift(), and .concat() 
+
+		when you pass an array into a function, if the array is mutated inside the function, that change will be maintained outside the function as well.
+		You might also see this concept explained as pass-by-reference
+	
+
+	array structures
+		nested arrays
+			const nestedArr = [[1], [2, 3]];
+			nestedArr[1]; // => [2, 3]
+			nestedArr[1][0]; // => 2
+	array manipulation
