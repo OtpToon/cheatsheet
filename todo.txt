@@ -357,3 +357,47 @@ Arrays
 			nestedArr[1]; // => [2, 3]
 			nestedArr[1][0]; // => 2
 	array manipulation
+
+
+Loops
+	for
+		for (let counter = 0; counter < 4; counter++) {
+			console.log(counter);
+		};
+	while
+		let counter = 0;
+		while (counter < 4){
+			console.log(counter);
+			counter++;
+		};
+	do...while
+		let counter = 0;
+		do {
+			console.log(counter);
+			counter++;
+		} while (counter < 4);
+	for...of
+		const hobbies = ['singing', 'eating', 'quidditch', 'writing'];
+		for (const hobby of hobbies) {
+		console.log(`I enjoy ${hobby}.`);
+		}
+	nested Loops
+		for (stuff){
+			for (other stuff){
+				-> nested loop
+			};
+		};
+	break
+		const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+		for(let i = 0; i < rapperArray(.)length; ++i){
+		console.log(rapperArray[i]);
+		if (rapperArray[i] === 'Notorious B.I.G.'){
+			break;
+		}
+		};
+		console.log('And if you don\'t know, now you know.');
+	continue
+		-> skip the rest of the loop
+	
+
