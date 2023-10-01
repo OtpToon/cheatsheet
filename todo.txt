@@ -398,6 +398,85 @@ Loops
 		};
 		console.log('And if you don\'t know, now you know.');
 	continue
-		-> skip the rest of the loop
+		-> skip the rest of this itteration of the loop
 	
 
+Objects
+
+Object literal
+	let spaceship = {
+		[identifier] : [value], //identifier is type string
+		'Fuel Type' : 'diesel',
+		color : 'silver //identifier without special char can be without '
+	};
+
+Accessing Properties
+	dot notation
+		object.propname;
+	bracket notation
+		object['propname']; //can use string variables instead of string
+
+Property Assignment
+	object.propname = value; //either changes or creates property
+	object['propname'] = value;
+
+	const spaceship = {type: 'shuttle'};
+	spaceship = {type: 'alien'}; // TypeError: Assignment to constant variable.
+	spaceship.type = 'alien'; // Changes the value of the type property
+	spaceship.speed = 'Mach 5'; // Creates a new key of 'speed' with a value of 'Mach 5'
+
+	delete object.propname; //removes propname from the object
+
+Methods
+	function in an object
+
+	const alienShip = {
+		invade: function () { 
+			console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+		}
+	};
+	are the same
+	const alienShip = {
+		invade () { 
+			console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+		}
+	};
+
+Nested Objects
+	an object might have another object as a property which in turn could have a property that’s an array of even more objects!
+
+Pass by reference
+	const spaceship = {
+		homePlanet : 'Earth',
+		color : 'silver'
+	};
+	
+	let paintIt = obj => {
+		obj.color = 'glorious gold'
+	};
+	
+	paintIt(spaceship);
+	
+	spaceship.color // Returns 'glorious gold'
+
+	let spaceship = {
+		homePlanet : 'Earth',
+		color : 'red'
+	};
+	let tryReassignment = obj => {
+		obj = {
+			identified : false, 
+			'transport type' : 'flying'
+		}
+		console.log(obj) // Prints {'identified': false, 'transport type': 'flying'}
+	};
+	tryReassignment(spaceship) // The attempt at reassignment does not work.
+	spaceship // Still returns {homePlanet : 'Earth', color : 'red'};
+	spaceship = {
+		identified : false, 
+		'transport type': 'flying'
+	}; // Regular reassignment still works.
+
+Looping through objects
+	for...in will execute a given block of code for each property in an object.
+	
