@@ -648,3 +648,58 @@ Iterators
 		console.log(newSum);
 	.some()//returns true if at least 1 statement is true
 	.every()//returns true if every statement is true
+
+
+Github
+	git init
+		start a new Repository
+	git clone [link]
+		copy a project to work on locally
+	git checkout -b [name of new branch]
+		create a new branch locally and puts it as active
+		without -b to change active branch
+		instead "HEAD [filename]" to revert changes to last commit
+	git add [filename or . (for all)]
+		add specified file or all files in the directory to the current active branch
+		can take multiple filenames in 1 line
+	git status
+		shows all the changes made since the last commit
+	git commit -m "message"
+		creates a savepoint of current files with a messages describing what was changed
+			--amend (adds the current staging area to the previous commit) --no-edit (to not having to change the message of the commit)
+	git push --set-upstream origin [branchname]
+		uploads a local branch to github as new branch
+	git log
+		shows the history of changes made to the Repository
+		usefull commands:
+			--oneline (shows log with 1 line per commit)
+			-S "keyword" (shows only commits with the keyword)
+			--oneline -- graph (shows the order in which the commits were made visually)
+	git show HEAD
+		shows the log of the latest commit with all changes
+	git reset [HEAD or starting 7 letters of the identifier] (optional filename)
+		HEAD is the latest commit, otherwise use 7+ letters to choose which commit to use
+		add filename to only reset a single file
+			DELETES EVERY COMMIT AFTER THE ONE CHOSEN
+	git diff
+		only shows anything if there is differences to show
+	git stash (pop/list)
+		temporarily saves your current work to be able to change branches without loosing your work
+		pop = go back to that save point
+		list = show all stashes
+		h = show all commands with explanation
+
+	git alias commands
+		git config --global alias.co "checkout" -> git co = git checkout
+	
+		
+
+	Github Repository -> Pull request
+		left is what is getting merged into
+		right is where the changes come from
+		-> create new pull request
+			Comment = write down what needs to be tested
+			Reviewers = add people who need to look at your changes
+
+	nano [path/name of file to change]
+		opens a file in text editor in terminal
