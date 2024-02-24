@@ -651,6 +651,13 @@ Iterators
 
 
 Github
+	Workflow:
+		1.) Create a branch
+		2.) Commit Changes
+		3.) Create a pull request
+		4.) Review pull request
+		5.) Merge and delete branch
+
 	git init
 		start a new Repository
 	git clone [link]
@@ -703,3 +710,14 @@ Github
 
 	nano [path/name of file to change]
 		opens a file in text editor in terminal
+
+README/.md
+	Conventions:
+		Project title
+		Description (why i made this, what problems does it solve)
+		Features (show off your what you are proud of)
+		How to use (step by step how to install)
+		Technologies (what frameworks/programs etc did you use and why)
+		Collaborators (who did you work for, give them credit)
+		License (let others know what they are allowed to do (https://choosealicense.com))
+		
