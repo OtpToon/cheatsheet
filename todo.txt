@@ -1,3 +1,30 @@
+HTML
+<script></script> = embed javascript-code into the html file
+<script src="./exampleScript.js></script> = linking a .js file to the html file
+<script src="..." defer></script> = wait to load this script until the rest of the htmlfile is loaded
+<script src="..." async></script> = loads the script at the same time as the rest of the file and executes as soon as it is downloaded
+
+old convention:
+	put scripts right before </body>
+current convention:
+	put scripts in the <head> with defer or async
+
+<form action"[path to file used after submission]" method="[type of how info is sent and processed (POST)]"
+<input id="[id]" name="[name]" type="[type(text, password, number, range, checkbox, radio, submit, select)]" (required, if so) min/maxlength="[number]" min/max="[number]" pattern="[regex]" placeholder="[text]">
+<label for="[id/name]">TEXT</label>
+
+
+DOM
+	Document
+	Object
+	Model
+	usually shown as html-tag-intendation or a tree
+	parent, child node
+		The DOM is a structural model of a web page that allows for scripting languages to access that page.
+		The system of organization in the DOM mimics the nesting structure of an HTML document.
+		Elements nested within another are referred to as the children of that element. The element they are nested within is called the parent element of those elements.
+		The DOM also allows access to the attributes of an HTML element such as style, id, etc.
+
 CSS
 
 a {
@@ -55,6 +82,18 @@ Design Guide
 Wireframes and Prototypes: https://medium.com/thinking-design/everything-you-need-to-know-about-wireframes-and-prototypes-76f828a1bcbc
 Order of HTML
 enter CSS rulessets without content when creating html tags
+
+Remember, the keys to building a more visually inclusive Web are:
+- Using contrast so our text and colors provide better visual cues
+- Using correct font size so our content is legible
+- Creating user interfaces that are enhanced by, but not dependent on, color
+
+Using ARIA roles and properties, alt attributes, and semantic elements in your HTML is a simple way to make your website accessible to visually-impaired Internet users.
+- Using semantic HTML elements whenever possible (such as <header> instead of <div id="header">) will allow screen reader users to navigate your website more efficiently.
+- The role attribute is used to communicate information about the role of specific elements.
+- role="presentation" allows a screen reader to skip markup elements that don’t directly contain useful information.
+- aria-label and other ARIA properties can be used to help users perceive information that is communicated visually but not through text.
+- The alt attribute should be added to every image element (and all other elements that support it) instead of aria-label. When used, its value should be a useful description of the image.
 
 Grid Design: columns, rows, gutter, margin
 (usually 12 or 16 columns and 4ish rows, gutter is significantly smaller than row/column)
@@ -648,6 +687,59 @@ Iterators
 		console.log(newSum);
 	.some()//returns true if at least 1 statement is true
 	.every()//returns true if every statement is true
+
+JS on html
+	document.element to select the element
+	document.element.innerHTML = '[working html]' to change the html inside of the selected element
+		document.body.innerHTML = '<h1>This is now the heading of the body element</h1>'
+	.querySelector('[selector like p]') returns the first element fitting the Description
+	.getElementById('[id]')
+	
+	.getElementsByClassName('[class]')
+	.getElementsByTagName('[tagname]')
+		return elements in array
+
+	.element.style.property = ... (property Camelcase instead of '-')(Value = 'value')
+
+	.parentNode (is null for document)
+	.children (if no children returns null)
+		are properties on every node
+
+	new_element = .createElement('[selector]') creates a new element without content
+	new_element.id/innerHTML... to change/create content
+	.[path].appendChild(new_element) to add the element to the website
+
+	let element = document.[some sort of element selection]
+	.element.parentNode.removeChild(element)
+	.hidden = true/false (if you don't want to delete)
+
+	clicking on button
+		var element = document.querySelector('button');
+		
+		element.onclick = function() {
+			element.style.backgroundColor = 'blue
+		};
+			(is the same as)
+		function turnBlue() {
+			element.style.backgroundColor = 'blue
+		};
+		element.onclick = turnBlue;
+	
+	Event Handler Registration
+		[element].addEventListener('[eventName]', functiondefinition or functionname)
+		[element].on[event] = eventHandlerFunction Definition OR Name;
+			.onclick
+			.onwheel
+			.onmousedown
+			.onmouseup
+			.onmouseover
+			.onmouseout
+
+		[element].removeEventListener('[eventName]', functionname)
+
+		function eventHandler(event){
+			console.log(event.target/type/timeStamp)
+		};
 
 
 Github
