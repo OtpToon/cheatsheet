@@ -389,6 +389,11 @@ Arrays
 
 		when you pass an array into a function, if the array is mutated inside the function, that change will be maintained outside the function as well.
 		You might also see this concept explained as pass-by-reference
+
+		Destructuring
+			let cars = ['ferrari', 'tesla', 'cadillac'];
+			let [car1, car2, car3] = cars;
+			console.log(car1, car2, car3);
 	
 
 	array structures
@@ -456,6 +461,11 @@ Accessing Properties
 	bracket notation
 		object['propname']; //can use string variables instead of string
 
+	Dstructuring
+		let destinations = { x: 'LA', y: 'NYC', z: 'MIA' };
+		let { x, y, z } = destinations;
+		console.log(x, y, z);
+
 Property Assignment
 	object.propname = value; //either changes or creates property
 	object['propname'] = value;
@@ -468,6 +478,19 @@ Property Assignment
 	delete object.propname; //removes propname from the object
 
 Methods
+
+	let truck = {
+		model: '1977 Mustang convertible',
+		maker: 'Ford',
+		city: 'Detroit',
+		year: '1977',
+		convertible: true
+	};
+	const printCarInfo = ({model, maker, city}) => {
+		console.log(`The ${model}, or ${maker}, is in the city ${city}.`);
+	};
+	printCarInfo(truck);
+
 	function in an object
 
 	const alienShip = {
@@ -750,7 +773,92 @@ async js
 	keywords
 		async function functionName(){
 		await someFunctionWith_setTimeout()//which returns new Promise((resolve, reject)=>{ logic })
+			OR
+		await someVariableThatUsedAsyncBefore;
+			OR
+		await Promis.all(...);
 	}
+
+API
+	fetch(stringOfURL);//requests information from the URL
+
+	GET Request:
+		const getSuggestions = () => {
+		const endpoint = //URL as string
+		
+		fetch(endpoint).then(response => {
+			if (response.ok) {
+			return response.json();
+			}
+			throw new Error('Request failed!');
+		}, networkError => {
+			console.log(networkError.message)
+		}).then(jsonResponse => {
+			//deal with Response, for example:
+			renderResponse(jsonResponse);
+		})
+		}
+	async GET Request:
+		const getAPIStuff = async () => {
+			const endpoint = ;//build your URL as string
+			try{
+				const response = await fetch(endpoint)
+				if(response.ok){
+					//deal with the response, for example:
+					const jsonResponse = await response.json();
+				}
+			}catch(err){
+				console.log(err);
+			}
+		}
+	POST Request:
+		const shortenUrl = () => {
+		const data = JSON.stringify(/* your Data*/);
+		
+			fetch(url, {
+			method: 'POST',
+			headers: {
+			'Content-type': 'application/json',
+			'apikey': apiKey
+			},
+			body: data
+		}).then(response =>{
+			if(response.ok){
+			return response.json();
+			}
+			throw new Error('Request failed!');
+		}, networkError => {
+			console.log(networkError.message);
+		}).then(jsonResponse => {
+			//deal with Response, for example:
+			renderResponse(jsonResponse);
+		})
+		}
+	async POST Request:
+		const shortenUrl = async () => {
+			const urlToShorten = inputField.value;//data to pass to API
+			const data = JSON.stringify({destination: urlToShorten});//format the data
+			try {
+				const response = await fetch(url, {//format your Request
+					method : 'POST',
+					body : data,
+					headers : {
+					'Content-type' : 'application/json',
+					'apikey' : apiKey
+					}
+				}
+				);
+					if(response.ok){
+				const jsonResponse = await response.json();
+				renderResponse(jsonResponse);
+				}
+			} catch (error) {
+				console.log(error);
+			}
+		}
+
+
+
 
 Testing
 	Types of tests
@@ -874,7 +982,35 @@ Testing
 				before(function);//run before the first test
 				after(function);//run after the last test
 
-
+JSON
+	{
+		"student": {
+			"name": "Rumaisa Mahoney",
+			"age": 30,
+			"fullTime": true,
+			"languages": [ "JavaScript", "HTML", "CSS" ],
+			"GPA": 3.9,
+			"favoriteSubject": null
+		}
+	}
+	Syntax
+		{...}//hold objects
+		[...]//hold arrays
+		://Seperator of name:value
+		,//Sperator of name:value, name:value pairs - trailing , is forbidden
+		""//names must use double quotes
+	DataTypes
+		string (double-quoted)
+			used for unsupported data types, that will be translated in apps
+		number (integer or floating point)
+		object (name-value pair)
+		array (comma delimited)
+		boolean (true or false)
+		null
+	function
+		JSON.
+			parse(jsonData);//returns a js-Object with the exact data as the jsonData
+			stringify(jsObject);//returns jsData with exact data as the jsObject
 
 JS on html
 	document.element to select the element
@@ -928,6 +1064,26 @@ JS on html
 		function eventHandler(event){
 			console.log(event.target/type/timeStamp)
 		};
+
+JSX
+	JSX is a syntax extension for JavaScript. It was written to be used with React. JSX code looks a lot like HTML.
+	What does “syntax extension” mean?
+	In this case, it means that JSX is not valid JavaScript. Web browsers can’t read it!
+	If a JavaScript file contains JSX code, then that file will have to be compiled. This means that before the file reaches a web browser,
+	a JSX compiler will translate any JSX into regular JavaScript.
+
+	the most outer part of JSX MUST be exactly 1 element
+
+	HTML class = JSX className//"class" is reserved in js
+
+	<element attributename='attributevalue'>innerHTML</element>;
+	(
+		//multiline JSX
+	);
+
+	functions
+		const variable = createRoot(specific Location in the DOM);//where to put JSX
+		variable.render(JSX);//draw JSX
 
 
 Github
