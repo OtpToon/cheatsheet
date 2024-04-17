@@ -1073,6 +1073,18 @@ JSX
 	a JSX compiler will translate any JSX into regular JavaScript.
 
 	the most outer part of JSX MUST be exactly 1 element
+	Selfclosing tags MUST include the "/" at the end (example: <br />)
+	using { normal js } lets you use js inside of JSX
+		can't be used for if-Statements
+		ternary works tho
+			{ age>= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
+			<img src={pics[coinToss()==='heads' ? 'kitty' : 'doggy']} />;
+		String Array
+			list = stringArray.map(person => <li>{person}</li>);
+			list = stringArray.map((person, i) => <li key={'person_'+i}>{person}</li>);
+	
+	can be avoided using
+		const greatestDivEver = React.createElement("div",null,"i am div");
 
 	HTML class = JSX className//"class" is reserved in js
 
