@@ -860,7 +860,151 @@ API
 
 
 
+
+
+JSON
+	{
+		"student": {
+			"name": "Rumaisa Mahoney",
+			"age": 30,
+			"fullTime": true,
+			"languages": [ "JavaScript", "HTML", "CSS" ],
+			"GPA": 3.9,
+			"favoriteSubject": null
+		}
+	}
+	Syntax
+		{...}//hold objects
+		[...]//hold arrays
+		://Seperator of name:value
+		,//Sperator of name:value, name:value pairs - trailing , is forbidden
+		""//names must use double quotes
+	DataTypes
+		string (double-quoted)
+			used for unsupported data types, that will be translated in apps
+		number (integer or floating point)
+		object (name-value pair)
+		array (comma delimited)
+		boolean (true or false)
+		null
+	function
+		JSON.
+			parse(jsonData);//returns a js-Object with the exact data as the jsonData
+			stringify(jsObject);//returns jsData with exact data as the jsObject
+
+JS on html
+	document.element to select the element
+	document.element.innerHTML = '[working html]' to change the html inside of the selected element
+		document.body.innerHTML = '<h1>This is now the heading of the body element</h1>'
+	.querySelector('[selector like p]') returns the first element fitting the Description
+	.getElementById('[id]')
+	
+	.getElementsByClassName('[class]')
+	.getElementsByTagName('[tagname]')
+		return elements in array
+
+	.element.style.property = ... (property Camelcase instead of '-')(Value = 'value')
+
+	.parentNode (is null for document)
+	.children (if no children returns null)
+		are properties on every node
+
+	new_element = .createElement('[selector]') creates a new element without content
+	new_element.id/innerHTML... to change/create content
+	.[path].appendChild(new_element) to add the element to the website
+
+	let element = document.[some sort of element selection]
+	.element.parentNode.removeChild(element)
+	.hidden = true/false (if you don't want to delete)
+
+	clicking on button
+		var element = document.querySelector('button');
+		
+		element.onclick = function() {
+			element.style.backgroundColor = 'blue
+		};
+			(is the same as)
+		function turnBlue() {
+			element.style.backgroundColor = 'blue
+		};
+		element.onclick = turnBlue;
+	
+	Event Handler Registration
+		[element].addEventListener('[eventName]', functiondefinition or functionname)
+		[element].on[event] = eventHandlerFunction Definition OR Name;
+			.onclick
+			.onwheel
+			.onmousedown
+			.onmouseup
+			.onmouseover
+			.onmouseout
+
+		[element].removeEventListener('[eventName]', functionname)
+
+		function eventHandler(event){
+			console.log(event.target/type/timeStamp)
+		};
+
+JSX
+	JSX is a syntax extension for JavaScript. It was written to be used with React. JSX code looks a lot like HTML.
+	What does “syntax extension” mean?
+	In this case, it means that JSX is not valid JavaScript. Web browsers can’t read it!
+	If a JavaScript file contains JSX code, then that file will have to be compiled. This means that before the file reaches a web browser,
+	a JSX compiler will translate any JSX into regular JavaScript.
+
+	the most outer part of JSX MUST be exactly 1 element
+	Selfclosing tags MUST include the "/" at the end (example: <br />)
+	using { normal js } lets you use js inside of JSX
+		can't be used for if-Statements
+		ternary works tho
+			{ age>= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
+			<img src={pics[coinToss()==='heads' ? 'kitty' : 'doggy']} />;
+		String Array
+			list = stringArray.map(person => <li>{person}</li>);
+			list = stringArray.map((person, i) => <li key={'person_'+i}>{person}</li>);
+	
+	can be avoided using
+		const greatestDivEver = React.createElement("div",null,"i am div");
+
+	HTML class = JSX className//"class" is reserved in js
+
+	<element attributename='attributevalue'>innerHTML</element>;
+	(
+		//multiline JSX
+	);
+
+	functions
+		const variable = createRoot(specific Location in the DOM);//where to put JSX
+		variable.render(JSX);//draw JSX
+
+React
+	import React from 'react';//for react stuff
+	import ReactDOM from 'react-dom/client';//to interact with the DOM
+		often a split with App.js and index.js is made. App only uses react (the first import) while index also updates the DOM (both imports)
+	
+	Functions
+		function AFunctionReturningJSX(){//named in PascalCase
+			return <h1>Hello world</h1>;
+		};
+		const exampleElement = ReactDOM.createRoot(document.getElementById('example'));//get an element from the DOM and create a virtual Copy of it
+		exampleElement.render(someJSX or <AFunctionReturningJSX />);//compare the new virtual DOM to the old and update the changes to the actual DOM
+		<AFunctionReturningJSX />;//can be used in all JSX to use the return value of the function
+	Create Project
+		npx create-react-app nameofproject //no uppercase in the name, --use-npm is optional
+
 Testing
+	Setup
+		Mocha test framework
+			Setup in Project:
+				Terminal:
+					npm init
+					npm install mocha -D
+				Files:
+					package.json:
+						"scripts": {
+							"test": "mocha"
+						}
+					//lets you use "npm test" in Terminal instead of "./node_modules/mocha/bin/mocha"
 	Types of tests
 		//fastest/cheapest to slowest/most expensive test type
 		Unit tests
@@ -981,121 +1125,6 @@ Testing
 				afterEach(function);//run after each test
 				before(function);//run before the first test
 				after(function);//run after the last test
-
-JSON
-	{
-		"student": {
-			"name": "Rumaisa Mahoney",
-			"age": 30,
-			"fullTime": true,
-			"languages": [ "JavaScript", "HTML", "CSS" ],
-			"GPA": 3.9,
-			"favoriteSubject": null
-		}
-	}
-	Syntax
-		{...}//hold objects
-		[...]//hold arrays
-		://Seperator of name:value
-		,//Sperator of name:value, name:value pairs - trailing , is forbidden
-		""//names must use double quotes
-	DataTypes
-		string (double-quoted)
-			used for unsupported data types, that will be translated in apps
-		number (integer or floating point)
-		object (name-value pair)
-		array (comma delimited)
-		boolean (true or false)
-		null
-	function
-		JSON.
-			parse(jsonData);//returns a js-Object with the exact data as the jsonData
-			stringify(jsObject);//returns jsData with exact data as the jsObject
-
-JS on html
-	document.element to select the element
-	document.element.innerHTML = '[working html]' to change the html inside of the selected element
-		document.body.innerHTML = '<h1>This is now the heading of the body element</h1>'
-	.querySelector('[selector like p]') returns the first element fitting the Description
-	.getElementById('[id]')
-	
-	.getElementsByClassName('[class]')
-	.getElementsByTagName('[tagname]')
-		return elements in array
-
-	.element.style.property = ... (property Camelcase instead of '-')(Value = 'value')
-
-	.parentNode (is null for document)
-	.children (if no children returns null)
-		are properties on every node
-
-	new_element = .createElement('[selector]') creates a new element without content
-	new_element.id/innerHTML... to change/create content
-	.[path].appendChild(new_element) to add the element to the website
-
-	let element = document.[some sort of element selection]
-	.element.parentNode.removeChild(element)
-	.hidden = true/false (if you don't want to delete)
-
-	clicking on button
-		var element = document.querySelector('button');
-		
-		element.onclick = function() {
-			element.style.backgroundColor = 'blue
-		};
-			(is the same as)
-		function turnBlue() {
-			element.style.backgroundColor = 'blue
-		};
-		element.onclick = turnBlue;
-	
-	Event Handler Registration
-		[element].addEventListener('[eventName]', functiondefinition or functionname)
-		[element].on[event] = eventHandlerFunction Definition OR Name;
-			.onclick
-			.onwheel
-			.onmousedown
-			.onmouseup
-			.onmouseover
-			.onmouseout
-
-		[element].removeEventListener('[eventName]', functionname)
-
-		function eventHandler(event){
-			console.log(event.target/type/timeStamp)
-		};
-
-JSX
-	JSX is a syntax extension for JavaScript. It was written to be used with React. JSX code looks a lot like HTML.
-	What does “syntax extension” mean?
-	In this case, it means that JSX is not valid JavaScript. Web browsers can’t read it!
-	If a JavaScript file contains JSX code, then that file will have to be compiled. This means that before the file reaches a web browser,
-	a JSX compiler will translate any JSX into regular JavaScript.
-
-	the most outer part of JSX MUST be exactly 1 element
-	Selfclosing tags MUST include the "/" at the end (example: <br />)
-	using { normal js } lets you use js inside of JSX
-		can't be used for if-Statements
-		ternary works tho
-			{ age>= drinkingAge ? 'Buy Drink' : 'Do Teen Stuff' }
-			<img src={pics[coinToss()==='heads' ? 'kitty' : 'doggy']} />;
-		String Array
-			list = stringArray.map(person => <li>{person}</li>);
-			list = stringArray.map((person, i) => <li key={'person_'+i}>{person}</li>);
-	
-	can be avoided using
-		const greatestDivEver = React.createElement("div",null,"i am div");
-
-	HTML class = JSX className//"class" is reserved in js
-
-	<element attributename='attributevalue'>innerHTML</element>;
-	(
-		//multiline JSX
-	);
-
-	functions
-		const variable = createRoot(specific Location in the DOM);//where to put JSX
-		variable.render(JSX);//draw JSX
 
 
 Github
