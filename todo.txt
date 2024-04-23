@@ -981,14 +981,27 @@ React
 	import React from 'react';//for react stuff
 	import ReactDOM from 'react-dom/client';//to interact with the DOM
 		often a split with App.js and index.js is made. App only uses react (the first import) while index also updates the DOM (both imports)
+	prop convention
+		event handler functions:
+			return <Child onINSERT_EVENT={handleINSERT_EVENT} />;//handleClick, handleHover
+
+
 	
 	Functions
-		function AFunctionReturningJSX(){//named in PascalCase
-			return <h1>Hello world</h1>;
+		function AFunctionReturningJSX(props){//named in PascalCase
+			return <h1>{props.someString}</h1>;
 		};
 		const exampleElement = ReactDOM.createRoot(document.getElementById('example'));//get an element from the DOM and create a virtual Copy of it
 		exampleElement.render(someJSX or <AFunctionReturningJSX />);//compare the new virtual DOM to the old and update the changes to the actual DOM
-		<AFunctionReturningJSX />;//can be used in all JSX to use the return value of the function
+		<AFunctionReturningJSX someString="blablabla"/>;//can be used in all JSX to use the return value of the function
+
+		prop
+			.children//returns all Info within the prop it is called upon
+			default values
+				AFunctionReturningJSX.defaultProps = { text:'this is default text' };
+				function Example({text='This is default text'}){return...};
+				function Example2(props){ const {text = 'This is default text'}= props; return...};
+				
 	Create Project
 		npx create-react-app nameofproject //no uppercase in the name, --use-npm is optional
 
