@@ -1002,6 +1002,27 @@ React
 				function Example({text='This is default text'}){return...};
 				function Example2(props){ const {text = 'This is default text'}= props; return...};
 				
+		Hooks
+			useState(initialValue)
+				const [currentState, setCurrentState] = useState(initialValue);
+
+				export default function EmailTextInput() {
+					const [email, setEmail] = useState('');
+					const handleChange = (event) => {
+						const updatedEmail = event.target.value;
+						setEmail(updatedEmail);
+					}
+					return (
+						<input value={email} onChange={handleChange} />
+					);
+				}
+				
+			useEffect()
+			useContext()
+			useReducer()
+			useRef()
+
+
 	Create Project
 		npx create-react-app nameofproject //no uppercase in the name, --use-npm is optional
 
